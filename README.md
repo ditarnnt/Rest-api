@@ -1,2 +1,2 @@
 # rest-api
-pyhton-mysql-fastapi
+python-mysql-fastapi
