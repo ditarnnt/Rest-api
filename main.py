@@ -42,7 +42,7 @@ def read_employee_id(employee_id: int, db: Session = Depends(get_db)):
     return db_employee
 
 
-@app.put("employees/{employee_id}", response_model=schemas.Employee)
+@app.put("/employee/{employee_id}", response_model=schemas.Employee)
 def update_employee(employee: schemas.Employee, db: Session = Depends(get_db)):
     db_employee = crud.get_employee(db, employee_id=employee.employee_id)
     if db_employee is None:
